@@ -1,0 +1,31 @@
+<!-- Closure : closure means a function bind together with it's lexical environment.
+A closure gives you access to an outer function's scope from an inner function. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="callFunction()">click for increment</button>
+    <h1 id="demo"></h1>
+    <script>
+      function myFunction() {
+        let b = 0;
+        function innerFunction() {
+          let a = 10;
+          b += 10;
+          sum = a * b;
+          return sum;
+        }
+        return innerFunction;
+      }
+      let abc = myFunction();
+      function callFunction() {
+        document.getElementById("demo").innerHTML = abc();
+      }
+    </script>
+  </body>
+</html>

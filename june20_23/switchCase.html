@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="switchCase.js"></script> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="demo" value=""></input>
+    <button onclick="myFunction()">Switch</button>
+    <h1 id="demo1"></h1>
+    <script>
+       function myFunction() {
+        const abc = document.getElementById('demo').value;
+        // document.getElementById('demo1').innerHTML = abc
+        switch (abc) {
+            case "Hello":
+                document.getElementById("demo1").innerHTML ="Hehe";
+                break;
+            case "hello":
+                document.getElementById("demo1").innerHTML ="Hehe1";
+                break;
+            case "Hell":
+                document.getElementById("demo1").innerHTML ="Hehe2";
+                break;
+            default:
+                document.getElementById("demo1").innerHTML ="Didn't find anything.";
+        }
+    }
+    </script>
+  </body>
+</html>
