@@ -16,3 +16,11 @@ for (var i = 0; i <= 5; i++) {
 }
 
 console.log("Welcome to javascript world");
+
+for (var j = 0; j <= 4; j++) {
+  (function (j) {
+    setTimeout(() => {
+      console.log(j);
+    }, 2000 * j);
+  })(j);
+}
